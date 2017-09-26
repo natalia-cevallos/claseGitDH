@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: monospace;
+}
+
+.main-header {
+  width: auto;
+  height: 20%;
+  border: solid 5px red;
+  background-color: pink;
+
+}
+
+.container {
+   max-width: 1200px;
+   border: solid 5px black;
+   margin: auto;
+   background-color: olive;
+   overflow: hidden;
+}
+
+.cajaA {
+  width: 20.83%;
+  border: solid 5px yellow;
+  background-color: red;
+  float: left;
+}
+
+.cajaB {
+  width: 66.66%;
+  border: solid 5px yellow;
+  background-color: orange;
+  float: left;
+  margin-left: 2.08%;
+  margin-right: 2.08%
+}
+
+.cajaC {
+  width: 8.33%;
+  border: solid 5px yellow;
+  background-color: blue;
+  float: left;
+}
+
+.cajaA, .cajaB, .cajaC {
+  font-size: 28px;
+}
+
+h2 {
+  font-size:1em;
+}
+
+p {
+  font-size: 0.6em;
+}
+
+strong {
+
+}
+
+@media (max-width: 900px) {
+  body {
+    font-size: 18px;
+  }
+  .container {
+    padding: 20px;
+    width: 95%; /*tambien  puede ser vw*/
+    background-color: pink;
+  }
+  .cajaA {
+    width: 40%;
+  }
+  .cajaB {
+    width: 55%;
+    float: right; /*porque se me pasa y ya estaba flotando a la izquierda*/
+    margin: 0;
+  }
+  .cajaC {
+    width: 100%;
+    float: none;
+    clear: both; /* para limpiar entre hermanos */
+  }
+
+}
+
+@media (max-width: 450px) {
+  .cajaA, .cajaB, .cajaC {
+    width: 100%;
+    float: none;
+  }
+  body {
+    font-size:13px;
+  }
+
+}
